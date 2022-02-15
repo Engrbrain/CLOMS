@@ -6,6 +6,12 @@ namespace LOMS.Domain.Entities
 {
     public class LiftingProject : BaseEntity
     {
+        public LiftingProject()
+        {
+            subLiftingProjects = new HashSet<LiftingProject>();
+        }
+        public int? ParentId { get; set; }
+        public virtual LiftingProject ParentLiftingProject { get; set; }
         public string LiftingNumber { get; set; }
         public int ExportPermitId { get; set; }
         [ForeignKey("ExportPermitId")]
@@ -27,6 +33,8 @@ namespace LOMS.Domain.Entities
         public string CustomClearanceDocumentOutwardUrl { get; set; }
         public string OutturnCloseOutLetterUrl { get; set; }
         public string lettersOfProtestUrl { get; set; }
+
+        public virtual ICollection<LiftingProject> subLiftingProjects { get; set; }
 
 
     }
