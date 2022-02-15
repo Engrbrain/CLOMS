@@ -7,5 +7,6 @@ namespace LOMS.Domain.Entities
     {
         public string DestinationName { get; set; }
         public string FullAddress { get; set; }
+
     }
 }

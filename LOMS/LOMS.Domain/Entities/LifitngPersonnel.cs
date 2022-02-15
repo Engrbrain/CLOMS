@@ -13,6 +13,7 @@ namespace LOMS.Domain.Entities
         public weightUOM WeightUOM { get; set; }
         public string BloodPressure { get; set; }
         public bloodPressureUOM BloodPressureUOM { get; set; }
+        public bool is_AuthorizedSignature { get; set; }
         public int LifitngCrewId { get; set; }
         [ForeignKey("LifitngCrewId")]
         public LifitngCrew LifitngCrew { get; set; }

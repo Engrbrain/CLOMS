@@ -8,6 +8,7 @@ namespace LOMS.Domain
     public class BaseEntity
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public bool isDeleted { get; set; }
         public bool isActive { get; set; }
